@@ -80,3 +80,10 @@ void testaMediana(Array array)
 
     Console.WriteLine($"Mediana é igual a {mediana}");
 }
+
+int[] valores = { 10, 57, 34, 35 };
+
+for (int i = 0; i < valores.Length; i++)
+{
+    Console.WriteLine(valores[i]);
+}
