@@ -110,3 +110,19 @@ double mediaAmostra(double[] parametros)
 
     return media;
 }
+
+void TestaArrayContasCorrentes()
+{
+    ContaCorrente[] lista = new ContaCorrente[]
+    {
+        new ContaCorrente(845),
+        new ContaCorrente(343),
+        new ContaCorrente(643),
+    };
+
+    for(int i = 0;i < lista.Length; i++)
+    {
+        ContaCorrente contaAtual = lista[i];
+        Console.WriteLine($"Indice{i} - Conta: {contaAtual.Conta}");
+    }
+}
