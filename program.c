@@ -87,3 +87,26 @@ for (int i = 0; i < valores.Length; i++)
 {
     Console.WriteLine(valores[i]);
 }
+
+double mediaAmostra(double[] parametros)
+{
+    double media = 0;
+    double acumulador = 0;
+
+    if (parametros == null || parametros.Length == 0)
+    {
+        Console.WriteLine("Amostra de dados nula ou vazia.");
+        return 0;
+    }
+    else
+    {
+        for(int i = 0; i < parametros.Length; i++)
+        {
+            acumulador += parametros[i];
+        }
+
+        media = acumulador / parametros.Length;
+    }
+
+    return media;
+}
