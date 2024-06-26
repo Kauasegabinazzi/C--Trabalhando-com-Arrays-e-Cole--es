@@ -126,3 +126,14 @@ void TestaArrayContasCorrentes()
         Console.WriteLine($"Indice{i} - Conta: {contaAtual.Conta}");
     }
 }
+
+void TestaArrayConta()
+{
+    ListaDeContasCorrentes lista = new ListaDeContasCorrentes();
+    lista.Adicionar(new ContaCorrente(845));
+    lista.Adicionar(new ContaCorrente(343));
+    lista.Adicionar(new ContaCorrente(643));
+    lista.Adicionar(new ContaCorrente(545));
+    lista.Adicionar(new ContaCorrente(734));
+    lista.Adicionar(new ContaCorrente(233));
+}

@@ -1,0 +1,37 @@
+ public class ListaDeContasCorrentes
+ {
+     private ContaCorrente[] itens = null;
+     private int proximaPosicao=0;
+
+     public ListaDeContasCorrentes(int tamanhoInicial = 5)
+     {
+         itens = new ContaCorrente[tamanhoInicial];
+     }
+
+     public void Adicionar(ContaCorrente item)
+     {
+         Console.WriteLine($"Adicionado item na posicao: {proximaPosicao}");
+         verificar(proximaPosicao +1 );
+         itens[proximaPosicao] = item;
+         proximaPosicao++;
+     }
+
+     private void verificar(int tamanho)
+     {
+         if (itens.Length >= tamanho)
+         {
+             return;
+         }
+         else
+         {
+             Console.WriteLine($"Aumentando a capacidade");
+             ContaCorrente[] contaCorrentes = new ContaCorrente[tamanho];
+
+             for (int i = 0; i < itens.Length; i++) {
+                 contaCorrentes[i] = itens[i];
+             }
+
+             itens = contaCorrentes;
+         }
+     }
+ }
