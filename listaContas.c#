@@ -55,4 +55,24 @@
 
             return conta;
         }
+
+                public void remover(ContaCorrente item)
+        {
+            int indice = -1;
+
+            for (int i = 0; i < proximaPosicao; i++) {
+                if (contaAtual = item)
+                {
+                    indice = i;
+                    break;
+                }
+            }
+
+            for (int i = indice; i < proximaPosicao; i++) {
+                itens[i] = itens[i + 1];
+            }
+
+            proximaPosicao--;
+
+        }
  }
