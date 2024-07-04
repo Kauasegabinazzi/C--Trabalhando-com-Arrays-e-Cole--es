@@ -136,4 +136,10 @@ void TestaArrayConta()
     lista.Adicionar(new ContaCorrente(545));
     lista.Adicionar(new ContaCorrente(734));
     lista.Adicionar(new ContaCorrente(233));
+
+    var conta = new ContaCorrente(2323);
+    lista.Adicionar(conta);
+    lista.ExibeLista();
+    lista.remover(conta);
+    lista.ExibeLista();
 }

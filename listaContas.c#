@@ -56,23 +56,38 @@
             return conta;
         }
 
-                public void remover(ContaCorrente item)
+                public void remover(ContaCorrente conta)
         {
-            int indice = -1;
-
-            for (int i = 0; i < proximaPosicao; i++) {
-                if (contaAtual = item)
+            int indiceItem = -1;
+            for (int i = 0; i < proximaPosicao; i++)
+            {
+                ContaCorrente contaAtual = itens[i];
+                if (contaAtual == conta)
                 {
-                    indice = i;
+                    indiceItem = i;
                     break;
                 }
             }
 
-            for (int i = indice; i < proximaPosicao; i++) {
+            for (int i = indiceItem; i < proximaPosicao - 1; i++)
+            {
                 itens[i] = itens[i + 1];
             }
-
             proximaPosicao--;
+            itens[proximaPosicao] = null;
+        }
 
+        public void ExibeLista()
+        {
+            for (int i = 0; i < itens.Length; i++)
+            {
+                if (itens[i] != null)
+                {
+                    var conta = itens[i];
+                    Console.WriteLine($" Indice[{i}] = " +
+                        $"Conta:{conta.Conta} - " +
+                        $"N° da Agência: {conta.Numero_agencia}");
+                }
+            }
         }
  }
