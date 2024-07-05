@@ -90,4 +90,31 @@
                 }
             }
         }
+
+        
+        public ContaCorrente recuperarContaNoItem(int indice)
+        {
+            if(indice < 0 || indice >= proximaPosicao)
+            {
+                throw new ArgumentOutOfRangeException(nameof(indice));
+            }
+
+            return itens[indice];
+        }
+
+        public int Tamanho
+        {
+            get
+            {
+                return proximaPosicao;
+            }
+        }
+
+        public ContaCorrente this[int indice]
+        {
+            get
+            {
+                return recuperarContaNoItem(indice);
+            }
+        }
  }

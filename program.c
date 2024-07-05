@@ -132,14 +132,16 @@ void TestaArrayConta()
     ListaDeContasCorrentes lista = new ListaDeContasCorrentes();
     lista.Adicionar(new ContaCorrente(845));
     lista.Adicionar(new ContaCorrente(343));
-    lista.Adicionar(new ContaCorrente(643));
-    lista.Adicionar(new ContaCorrente(545));
-    lista.Adicionar(new ContaCorrente(734));
-    lista.Adicionar(new ContaCorrente(233));
 
     var conta = new ContaCorrente(2323);
     lista.Adicionar(conta);
-    lista.ExibeLista();
-    lista.remover(conta);
-    lista.ExibeLista();
+    //lista.ExibeLista();
+    //lista.remover(conta);
+    //lista.ExibeLista();
+
+    for (int i = 0; i< lista.Tamanho; i++)
+    {
+        ContaCorrente contas = lista[i];
+        Console.WriteLine($"Indice [{i}] = {conta.Conta}/{conta.Numero_agencia}");
+    }
 }
